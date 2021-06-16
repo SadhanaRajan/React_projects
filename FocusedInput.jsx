@@ -2,8 +2,8 @@
 // imports should NOT be used
 class Input extends React.PureComponent {
   render() {
-	let {forwardedRef, ...otherProps} = this.props; 
-	return <input {...otherProps} ref={forwardedRef} />;
+  let {forwardedRef, ...otherProps} = this.props; 
+  return <input {...otherProps} ref={forwardedRef} />;
   }
 }
 
@@ -13,14 +13,14 @@ const TextInput = React.forwardRef((props, ref) => {
 
 class FocusableInput extends React.Component {
   state = {
-	focusedState: false
+  focusedState: false
   }
   ref = React.createRef()
 
   render() {
-	let {focused} = this.props;
-	let {focusedState} = this.state;
-	return <TextInput ref={this.ref} />;
+  let {focused} = this.props;
+  let {focusedState} = this.state;
+  return <TextInput ref={this.ref} />;
   }
 
   // When the focused prop is changed from false to true, 
@@ -28,18 +28,18 @@ class FocusableInput extends React.Component {
   // If focused prop is true, the input should receive the focus.
   // Implement your solution below:
   componentDidUpdate(prevProps) {
-	if (this.props.focused && !prevProps.focused && document.activeElement !== this.ref.current) {
-	  this.ref.current.focus()
-	}
-	if (this.props.focused){
-	  this.ref.current.focus()
-	}
+  if (this.props.focused && !prevProps.focused && document.activeElement !== this.ref.current) {
+    this.ref.current.focus()
+  }
+  if (this.props.focused){
+    this.ref.current.focus()
+  }
   }
 
   componentDidMount() {
-	  this.setState( {
-		  focusedState: true
-	  } );
+    this.setState( {
+      focusedState: true
+    } );
   }
 
 }
