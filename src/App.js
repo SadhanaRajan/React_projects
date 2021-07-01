@@ -12,7 +12,9 @@ import React, { useState } from 'react'
 // import ColorContext from './components/ColorContext';
 
 import TablePagination from './components/Tesla/TablePagination'
-// import PhotosList from '../src/components/PhotosList'
+import PhotosList from '../src/components/PhotosList'
+
+// import Collapsible from './components/Atlassian/Collapsible';
 
 function App () {
 
@@ -43,7 +45,9 @@ function App () {
 
 
       <TablePagination />
-      {/* <PhotosList /> */ }
+      <PhotosList />
+
+      {/* <Collapsible /> */ }
 
     </>
   );
