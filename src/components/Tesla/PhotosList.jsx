@@ -14,8 +14,8 @@ export default function PhotosList () {
 	const [ theme, setTheme ] = useState( 'light' )
 	const photos = [
 		{
-			title: 'pic1',
-			imgSrc: ''
+			title: 'Photo #1',
+			imgSrc: "https://images.dog.ceo/breeds/weimaraner/n02092339_4169.jpg"
 		}
 	];
 	const fetchPhotos = () => {
@@ -49,7 +49,7 @@ export default function PhotosList () {
 								<h3 style={ { color: textColor } }>
 									{ photo.title }
 								</h3>
-								<img src={ photo.imgSrc } />
+								<img src={ photo.imgSrc } alt={ photo.title } title={ 'look at me' } height={ '300px' }/>
 							</li> )
 						} )
 					}
@@ -58,7 +58,16 @@ export default function PhotosList () {
 			<button
 				id='fetch-photos'
 				onClick={ fetchPhotos }
-			> Fetch Photos</button>
+			>
+				{/* Fetch Photos */ }
+				Change Theme
+			</button>
 		</>
 	);
 }
+
+
+/**
+ * use alt and title in image
+ * text color in parent div 
+ */

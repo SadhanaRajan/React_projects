@@ -11,10 +11,12 @@ import React, { useState } from 'react'
 
 // import ColorContext from './components/ColorContext';
 
-import TablePagination from './components/Tesla/TablePagination'
-import PhotosList from '../src/components/PhotosList'
+// import TablePaginationMemo from './components/Tesla/TablePaginationMemo';
+// import PhotosList from '../src/components/Tesla/PhotosList'
 
 // import Collapsible from './components/Atlassian/Collapsible';
+
+import TodoListComponent from './components/TodoListComponent';
 
 function App () {
 
@@ -44,10 +46,13 @@ function App () {
       </ColorContext.Provider> */}
 
 
-      <TablePagination />
-      <PhotosList />
+      {/* <TablePaginationMemo /> */}
+      {/* <br /><br /><br /><hr /><br /><br /><br /> */}
+      {/* <PhotosList /> */}
 
       {/* <Collapsible /> */ }
+
+      <TodoListComponent />
 
     </>
   );
